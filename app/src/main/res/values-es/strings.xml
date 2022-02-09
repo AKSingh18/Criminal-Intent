@@ -14,6 +14,8 @@
         <item quantity="other">%1$d crímenes</item>
     </plurals>
     <string name="crime_suspect_text">Elegir Sospechoso</string>
+    <string name="no_dial_suspect_text">No sospechoso</string>\
+    <string name="dial_suspect_text">llamar %s</string>
     <string name="crime_report_text">Enviar el Informe del Crimen</string>
     <string name="crime_report">%1$s!
         El crimen fue descubierto el %2$s. %3$s, y %4$s
@@ -24,4 +26,13 @@
     <string name="crime_report_suspect">el/la sospechoso/a es %s.</string>
     <string name="crime_report_subject">IntentoCriminal Informe del Crimen</string>
     <string name="send_report">Enviar el informe del crimen a través de</string>
+    <string name="empty_list_text">No hay delitos. Haga clic para agregar uno.</string>
+    <string name="crime_photo_button_description">Tomar foto de la escena del crimen</string>
+    <string name="crime_photo_no_image_description">Foto de la escena del crimen (no fijada)</string>
+    <string name="crime_photo_image_description">Foto de la escena del crimen (conjunto)</string>
+    <string name="permission_title">¿Permitir que Criminal Intent acceda a sus contactos?</string>
+    <string name="permission_message">Criminal Intent usa esto para hacer que algunas funciones funcionen, elegir y marcar números.</string>
+    <string name="time_picker_title">Hora del crimen:</string>
+    <string name="delete_crime">Eliminar crimen</string>
+    <string name="ok_text">OK</string>
 </resources>

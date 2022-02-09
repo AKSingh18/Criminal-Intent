@@ -13,12 +13,17 @@
         <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/activity_crime_pager.xml" value="0.13333333333333333" />
         <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/activity_fragment.xml" value="0.12360688956433637" />
         <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/activity_twopane.xml" value="0.21105072463768115" />
-        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/dialog_date.xml" value="0.12360688956433637" />
+        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/dialog_date.xml" value="0.2" />
+        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/dialog_date_new.xml" value="0.19202898550724637" />
         <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/dialog_image.xml" value="0.12360688956433637" />
-        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/fragment_crime.xml" value="0.176" />
+        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/dialog_time.xml" value="0.17980072463768115" />
+        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/dialog_time_picker.xml" value="0.25416666666666665" />
+        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/fragment_crime.xml" value="0.264" />
         <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/fragment_crime_list.xml" value="0.1" />
         <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/fragment_empty_view.xml" value="0.25416666666666665" />
-        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/list_item_crime.xml" value="0.12360688956433637" />
+        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/layout/list_item_crime.xml" value="0.264" />
+        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/menu/fragment_crime.xml" value="0.264" />
+        <entry key="..\:/Programs/AndroidStudioProjects/Criminal Intent - Copy/app/src/main/res/menu/fragment_crime_list.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
