@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.DateFormat;
 import java.util.List;
+import java.util.Locale;
 
 public class CrimeListFragment extends Fragment
 {
@@ -31,14 +32,11 @@ public class CrimeListFragment extends Fragment
     private boolean mSubtitleVisible;
     private Callbacks mCallbacks;
 
-    private int lastUpdatedCrimePosition = -1;
-    private int lastRemovedCrimePosition = -1;
-    private int newlyAddedCrimePosition = -1;
-
     private class CrimeHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
         private TextView mTitleTextView;
         private TextView mDateTextView;
+        private TextView mTimeTextView;
         private ImageView mSolvedImageView;
         private Crime mCrime;
 
@@ -48,6 +46,7 @@ public class CrimeListFragment extends Fragment
 
             mTitleTextView = itemView.findViewById(R.id.crime_title);
             mDateTextView = itemView.findViewById(R.id.crime_date);
+            mTimeTextView = itemView.findViewById(R.id.crime_time);
             mSolvedImageView = itemView.findViewById(R.id.crime_solved);
             itemView.setOnClickListener(this);
         }
@@ -55,7 +54,6 @@ public class CrimeListFragment extends Fragment
         @Override
         public void onClick(View view)
         {
-            lastUpdatedCrimePosition = getAdapterPosition();
             mCallbacks.onCrimeSelected(mCrime);
         }
 
@@ -64,8 +62,13 @@ public class CrimeListFragment extends Fragment
             mCrime = crime;
 
             mTitleTextView.setText(mCrime.getTitle());
-            DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL);
+
+            DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, Locale.getDefault());
             mDateTextView.setText(dateFormat.format(mCrime.getDate()));
+
+            DateFormat timeFormat = DateFormat.getTimeInstance(java.text.DateFormat.SHORT, Locale.getDefault());
+            mTimeTextView.setText(timeFormat.format(mCrime.getDate()));
+
             mSolvedImageView.setVisibility(crime.isSolved() ? View.VISIBLE : View.GONE);
         }
     }
@@ -152,8 +155,6 @@ public class CrimeListFragment extends Fragment
                         crimeLab.deleteCrime(crime);
 
                         mCallbacks.onCrimeDeleted(crime);
-                        lastRemovedCrimePosition = viewHolder.getAdapterPosition();
-
                         updateUI();
                     }
                 });
@@ -190,21 +191,8 @@ public class CrimeListFragment extends Fragment
         }
         else
         {
-            if (newlyAddedCrimePosition > -1)
-            {
-                mAdapter.notifyItemInserted(newlyAddedCrimePosition);
-                newlyAddedCrimePosition = -1;
-            }
-
-            if (lastUpdatedCrimePosition > -1) mAdapter.notifyItemChanged(lastUpdatedCrimePosition);
-
-            if (lastRemovedCrimePosition > -1)
-            {
-                mAdapter.notifyItemRemoved(lastRemovedCrimePosition);
-                lastRemovedCrimePosition = -1;
-            }
-
             mAdapter.setCrimes(crimes);
+            mAdapter.notifyDataSetChanged();
         }
 
         if (mAdapter.getItemCount() != 0) mEmptyListTextView.setVisibility(View.GONE);
@@ -248,12 +236,7 @@ public class CrimeListFragment extends Fragment
     private void initCrime()
     {
         Crime crime = new Crime();
-
         CrimeLab.get(getActivity()).addCrime(crime);
-
-        newlyAddedCrimePosition = mAdapter.getItemCount();
-        lastUpdatedCrimePosition = mAdapter.getItemCount();
-
         updateUI();
 
         mCallbacks.onCrimeSelected(crime);
