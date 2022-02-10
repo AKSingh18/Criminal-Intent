@@ -47,6 +47,8 @@ import java.util.UUID;
 
 public class CrimeFragment extends Fragment
 {
+    private static final String TAG = "CRIME_FRAGMENT";
+
     private static final String ARG_CRIME_ID = "crime_id";
     private static final String DIALOG_DATE = "DialogDate";
     private static final String DIALOG_TIME = "DialogTime";
