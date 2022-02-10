@@ -29,8 +29,8 @@
                 android:id="@+id/crime_camera"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_camera"
-                android:contentDescription="@string/crime_photo_button_description" />
+                android:contentDescription="@string/crime_photo_button_description"
+                android:src="@android:drawable/ic_menu_camera" />
 
         </LinearLayout>
 
@@ -50,7 +50,8 @@
                 android:id="@+id/crime_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textShortMessage" />
+                android:inputType="textShortMessage"
+                android:minHeight="48dp"/>
         </LinearLayout>
     </LinearLayout>
 

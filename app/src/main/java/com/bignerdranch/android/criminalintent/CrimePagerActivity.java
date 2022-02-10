@@ -75,6 +75,6 @@ public class CrimePagerActivity extends AppCompatActivity implements CrimeFragme
     @Override
     public void onCrimeDeleted(Crime crime)
     {
-
+        finish();
     }
 }

@@ -35,4 +35,5 @@
     <string name="time_picker_title">Hora del crimen:</string>
     <string name="delete_crime">Eliminar crimen</string>
     <string name="ok_text">OK</string>
+    <string name="crime_photo_change">" La foto del crimen ha cambiado"</string>
 </resources>
