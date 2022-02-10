@@ -24,7 +24,6 @@ public class TimePickerFragment extends DialogFragment
 
     private TimePicker mTimePicker;
     private Button mOkButton;
-    // private Calendar calendar;
 
     public static TimePickerFragment newInstance(Date date)
     {

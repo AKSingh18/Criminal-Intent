@@ -17,7 +17,6 @@ import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -42,7 +41,6 @@ import androidx.fragment.app.FragmentManager;
 
 import java.io.File;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
 import java.util.UUID;
@@ -137,6 +135,17 @@ public class CrimeFragment extends Fragment
             getActivity().revokeUriPermission(uri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
             updateCrime();
             updatePhotoView(mPhotoView.getWidth(), mPhotoView.getHeight());
+
+
+            mPhotoView.postDelayed(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    mPhotoView.announceForAccessibility(getString(R.string.crime_photo_change));
+                }
+            }, 200);
+
         }
         else if (requestCode == REQUEST_TIME)
         {
@@ -181,7 +190,6 @@ public class CrimeFragment extends Fragment
             crimeLab.deleteCrime(mCrime);
             mCallbacks.onCrimeDeleted(mCrime);
 
-            getActivity().finish();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -339,6 +347,7 @@ public class CrimeFragment extends Fragment
                 }
             }
         });
+
         mPhotoView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener()
         {
             @Override

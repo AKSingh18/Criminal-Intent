@@ -32,4 +32,5 @@
     <string name="crime_photo_image_description">Crime scene photo (set)</string>
     <string name="permission_title">Allow Criminal Intent to access your contacts?</string>
     <string name="permission_message">Criminal Intent uses this to make some features work, choose and dial numbers.</string>
+    <string name="crime_photo_change">Crime photo has changed</string>
 </resources>
