@@ -49,7 +49,7 @@ For a quick installation download the [apk](apk/app-debug.apk)
 
 <img src="files/Phone - No crime.jpg" width=130 height="240"> <img src="files/Phone - Crime list.jpg" width=130 height="240"> <img src="files/Phone - Crime count.jpg" width=130 height="240"> <img src="files/Phone - Crime.jpg" width=130 height="240"> <img src="files/Phone - Suspect changed.jpg" width=130 height="240">
 
-<img src="files/Tablet - Opening screen.jpg" width="455" height="305"> <img src="files/Tablet - Main screen.jpg" width="455" height="305">
+<img src="files/Tablet - Opening screen.png" width="455" height="305"> <img src="files/Tablet - Main screen.png" width="455" height="305">
 
 ## Resources
 
