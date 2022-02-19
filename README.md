@@ -52,5 +52,5 @@ For a quick installation download the [apk](apk/app-debug.apk)
 
 ## Resources
 
-* [Android Programming The Big Nerd Ranch Guide](https://bignerdranch.com/books/)
+* [Android Programming - The Big Nerd Ranch Guide](https://bignerdranch.com/books/android-programming-the-big-nerd-ranch-guide-4th-edition/)
 * [Android Developers](https://developer.android.com/)
